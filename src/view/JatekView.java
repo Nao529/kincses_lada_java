@@ -1,10 +1,20 @@
 package view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import model.LadaModel;
 
 public class JatekView {
     
     static Scanner beolv = new Scanner(System.in);  
+    
+    public void megjelenitFeliratok(ArrayList<LadaModel> ladak) {
+        for (int i = 0; i < ladak.size(); i++) {
+            System.out.println((char)('a' + i) + ") "
+                    + ladak.get(i).getSzin() + ": "
+                    + ladak.get(i).getFelirat());
+        }
+    }
     
     public String bekerValasz() {
         System.out.printf("Szerinted melyikben van a kincs? (a, b, c)\n");

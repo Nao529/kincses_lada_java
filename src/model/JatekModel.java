@@ -19,9 +19,12 @@ public class JatekModel {
     }
 
     public boolean ellenorzes(String valasz) {
-        if(valasz == "b"){
-            return true;
-        }
-        return false;
+        if (valasz.equals("a")) {
+        return ladak.get(0).isKincsetRejt();
+    } else if (valasz.equals("b")) {
+        return ladak.get(1).isKincsetRejt();
+    } else {
+        return ladak.get(2).isKincsetRejt();
+    }
     }
 }

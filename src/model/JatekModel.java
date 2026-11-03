@@ -18,7 +18,10 @@ public class JatekModel {
         return ladak;
     }
 
-//    public boolean ellenorzes() {
-//        
-//    }
+    public boolean ellenorzes(String valasz) {
+        if(valasz == "b"){
+            return true;
+        }
+        return false;
+    }
 }
